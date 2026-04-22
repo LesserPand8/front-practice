@@ -1,0 +1,7 @@
+p {
+  color: blue !important; /* 最優先で適用される */
+}
+
+#intro {
+  color: green; /* 無視される */
+}

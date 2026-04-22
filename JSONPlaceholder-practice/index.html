@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Posts</title>
+    <style>
+        .post-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 10px;
+        }
+
+        #loading,
+        #error,
+        #empty {
+            display: none;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Blog Posts
+    </h1>
+    <div id="posts-container">
+    </div>
+    <div id="loading">読み込み中...</div>
+    <div id="error">エラーが発生しました。時間をおいて再読み込みしてください。</div>
+    <div id="empty">投稿がありません。</div>
+    <script src="app.js">
+    </script>
+</body>
+
+</html>

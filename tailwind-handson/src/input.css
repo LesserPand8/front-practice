@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ボタンの共通スタイル */
+.btn {
+  @apply rounded-lg px-4 py-2 font-bold shadow-md transition-colors duration-300;
+}
+
+/* プライマリボタン */
+.btn-primary {
+  @apply bg-brand-primary text-white;
+}
+.btn-primary:hover {
+  @apply bg-red-700; /* 少し濃い赤 */
+}
+
+/* セカンダリボタン */
+.btn-secondary {
+  @apply bg-brand-secondary text-white;
+}
+.btn-secondary:hover {
+  @apply bg-gray-700; /* 少し濃いグレー */
+}

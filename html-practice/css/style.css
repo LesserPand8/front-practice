@@ -1,0 +1,74 @@
+body {
+  background-color: #f4f4f4; /* 薄いグレー */
+  font-family: sans-serif;
+  color: #333;
+}
+
+#profile-card {
+  /* ...既存のスタイル... */
+  display: grid; /* Gridコンテナにする */
+  grid-template-columns: 150px 1fr; /* 左列150px, 右列は残り全部 */
+  grid-template-rows: auto 1fr auto; /* 3行。中段は可変高 */
+  grid-template-areas: "name name" "image intro" "social social";
+  gap: 20px; /* エリア間の隙間 */ /* Grid化に伴い不要になる、または変更するスタイル */
+  padding: 30px; /* paddingは維持 */
+}
+
+.profile-image {
+  grid-area: image; /* imageエリアに配置 */
+  width: 150px; /* 幅を列のサイズに合わせる */
+  height: 150px; /* 高さも指定して正円を維持 */
+  border-radius: 50%;
+  /* display: block; margin: auto; は不要になるので削除 */
+}
+
+h1 {
+  grid-area: name; /* nameエリアに配置 */
+  text-align: center;
+  color: #2c3e50;
+  margin: 0; /* Gridで配置するので不要なmarginはリセット */
+}
+
+#profile-card > p {
+  grid-area: intro; /* introエリアに配置 */
+  margin: 0; /* 不要なmarginはリセット */
+}
+
+.social-section {
+  grid-area: social; /* socialエリアに配置 */
+}
+
+h2 {
+  border-bottom: 2px solid #3498db; /* 青い下線を追加 */
+  padding-bottom: 5px;
+  margin-top: 0; /* Gridのgapで余白ができるのでリセット */
+}
+
+ul {
+  list-style: none; /* リストの黒丸を削除 */
+  padding: 0;
+}
+
+.social-links a {
+  display: block; /* paddingを有効にするためブロック要素に */
+  padding: 10px 20px;
+  background-color: #3498db; /* 青い背景 */
+  color: white; /* 白い文字 */
+  text-decoration: none;
+  border-radius: 5px; /* 少し角を丸める */
+  transition: background-color 0.3s; /* 背景色の変化を滑らかに */
+}
+
+.social-links a:hover {
+  background-color: #2980b9; /* 少し濃い青に */
+  text-decoration: none; /* hover時も下線は不要 */
+}
+
+.social-links {
+  display: flex; /* これで<li>が横に並ぶ */
+  justify-content: center; /* アイテムを中央に寄せる */
+  gap: 15px; /* アイテム間の隙間を15pxに */
+  list-style: none; /* 黒丸を削除 */
+  padding: 0;
+  margin-top: 20px;
+}
