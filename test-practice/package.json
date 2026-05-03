@@ -11,7 +11,8 @@
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test:vrt": "test-storybook"
+    "test:vrt": "test-storybook",
+    "test:vrt:pw": "playwright test vrt.playwright.js"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
